@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Notícias</title>
+    <link rel="stylesheet" href="noticias.css">
+</head>
+<body>
+
+    <header>
+        <h1>Notícias</h1>
+        <a href="pagina_inicial.html"> <!-- Link para a outra página -->
+            <button class="header-button">&#8962;</button> <!-- Botão adicionado -->
+        </a>
+    </header>
+
+    <header class="navigation-bar">
+
+
+
+    <div class="content">
+        <div class="post">
+            <h2>Post 1 </h2>
+            <img src="noticias_img/noticia 1.png" alt="Noticia 1">
+            <a href="https://www.terra.com.br/mobilidade/carros/byd-revela-empresa-que-fara-melhorias-em-sua-fabrica-no-brasil,a29f59ee058c77708b7269b7c5e55c95p0r6s0m6.html">Leia mais</a>
+        </div>
+        <div class="post">
+            <h2>Post 2</h2>
+            <img src="noticias_img/noticia 2.png" alt="">
+            <a href="https://www.cnnbrasil.com.br/auto/brasil-avanca-e-chega-a-10-mil-pontos-de-recarga-para-eletricos-e-hibridos/">Leia mais</a>
+        </div>
+        <div class="post">
+            <h2>Post 3</h2>
+            <img src="noticias_img/noticia 3.png" alt="">
+            <a href="https://www.gov.br/secom/pt-br/assuntos/noticias/2025/janeiro/em-davos-governo-brasileiro-apresenta-ambiente-favoravel-a-investimentos-em-energia-limpa">Leia mais</a>
+        </div>
+        <div class="post">
+            <h2>Post 4</h2>
+            <img src="noticias_img/noticia 4.png" alt="">
+            <a href="https://g1.globo.com/meio-ambiente/noticia/2023/12/07/por-que-o-combustivel-que-eu-queimo-todo-dia-no-meu-carro-contribui-para-mais-ondas-de-calor.ghtml">Leia mais</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="post">
+            <h2>Post 5 </h2>
+            <img src="noticias_img/noticia 1.png" alt="Noticia 1">
+            <a href="https://www.terra.com.br/mobilidade/carros/byd-revela-empresa-que-fara-melhorias-em-sua-fabrica-no-brasil,a29f59ee058c77708b7269b7c5e55c95p0r6s0m6.html">Leia mais</a>
+        </div>
+        <div class="post">
+            <h2>Post 6</h2>
+            <img src="noticias_img/noticia 2.png" alt="">
+            <a href="https://www.cnnbrasil.com.br/auto/brasil-avanca-e-chega-a-10-mil-pontos-de-recarga-para-eletricos-e-hibridos/">Leia mais</a>
+        </div>
+        <div class="post">
+            <h2>Post 7</h2>
+            <img src="noticias_img/noticia 3.png" alt="">
+            <a href="https://www.gov.br/secom/pt-br/assuntos/noticias/2025/janeiro/em-davos-governo-brasileiro-apresenta-ambiente-favoravel-a-investimentos-em-energia-limpa">Leia mais</a>
+        </div>
+        <div class="post">
+            <h2>Post 8</h2>
+            <img src="noticias_img/noticia 4.png" alt="">
+            <a href="https://g1.globo.com/meio-ambiente/noticia/2023/12/07/por-que-o-combustivel-que-eu-queimo-todo-dia-no-meu-carro-contribui-para-mais-ondas-de-calor.ghtml">Leia mais</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="post">
+            <h2>Post 9 </h2>
+            <img src="noticias_img/noticia 1.png" alt="Noticia 1">
+            <a href="https://www.terra.com.br/mobilidade/carros/byd-revela-empresa-que-fara-melhorias-em-sua-fabrica-no-brasil,a29f59ee058c77708b7269b7c5e55c95p0r6s0m6.html">Leia mais</a>
+        </div>
+        <div class="post">
+            <h2>Post 10</h2>
+            <img src="noticias_img/noticia 2.png" alt="">
+            <a href="https://www.cnnbrasil.com.br/auto/brasil-avanca-e-chega-a-10-mil-pontos-de-recarga-para-eletricos-e-hibridos/">Leia mais</a>
+        </div>
+        <div class="post">
+            <h2>Post 11</h2>
+            <img src="noticias_img/noticia 3.png" alt="">
+            <a href="https://www.gov.br/secom/pt-br/assuntos/noticias/2025/janeiro/em-davos-governo-brasileiro-apresenta-ambiente-favoravel-a-investimentos-em-energia-limpa">Leia mais</a>
+        </div>
+        <div class="post">
+            <h2>Post 12</h2>
+            <img src="noticias_img/noticia 4.png" alt="">
+            <a href="https://g1.globo.com/meio-ambiente/noticia/2023/12/07/por-que-o-combustivel-que-eu-queimo-todo-dia-no-meu-carro-contribui-para-mais-ondas-de-calor.ghtml">Leia mais</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Notícias ARBOR. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const items = Array.from(track.children);
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let currentIndex = 0;
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+    </script>
+</body>
+</html>
