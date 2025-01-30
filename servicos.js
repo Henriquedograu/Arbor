@@ -8,7 +8,9 @@ document.body.appendChild(overlay);
 
 // Função para abrir ou fechar a imagem
 images.forEach((img) => {
-    img.addEventListener('click', () => {
+    img.addEventListener('click', (event) => {
+        // Impede que o clique na imagem feche a sobreposição (se clicado nas imagens)
+        event.stopPropagation();
         // Alterna a classe 'expanded' na imagem clicada
         img.parentElement.classList.toggle('expanded');
         
@@ -42,7 +44,7 @@ overlayLogin.classList.add('overlay-login');
 overlayLogin.innerHTML = `
     <div class="login-message">
         <h2>Você precisa fazer o login para continuar!</h2>
-        <button class="login-btn" onclick="redirectToLogin()">Fazer Login</button>
+        <button class="login-btn" onclick="redirectToLogin(event)">Fazer Login</button>
     </div>
 `;
 
@@ -50,7 +52,8 @@ overlayLogin.innerHTML = `
 document.body.appendChild(overlayLogin);
 
 // Função para redirecionar para a página de login
-function redirectToLogin() {
+function redirectToLogin(event) {
+    event.stopPropagation();  // Impede que o clique no botão propague e dispare o evento de clique geral
     window.location.href = 'login2.html'; // Altere para a página de login real
 }
 
@@ -66,7 +69,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Evento de click para mostrar a sobreposição
-window.addEventListener('click', () => {
+document.addEventListener('click', () => {
     if (scrollBlocked) {
         overlayLogin.classList.add('active');
         window.scrollTo(0, 0); // Impede o scroll
@@ -134,11 +137,12 @@ function login() {
     }
 }
 
-// Função chamada quando o usuário tenta rolar a página
-function attemptClickOrScroll() {
+// Função chamada quando o usuário tenta rolar a página ou clicar
+function attemptClickOrScroll(event) {
     if (!scrollBlocked) {
         return;
     }
+    event.stopPropagation(); // Previne propagação do clique para que não seja capturado novamente
     lockPage(); // Impede o scroll até que o login seja realizado
     overlayLogin.classList.add('active'); // Exibe a sobreposição
 }
@@ -146,5 +150,5 @@ function attemptClickOrScroll() {
 // Inicia o bloqueio da rolagem assim que o usuário clicar ou rolar na página
 window.onload = function () {
     window.addEventListener('scroll', attemptClickOrScroll); // Chama a função ao rolar a página
-    window.addEventListener('click', attemptClickOrScroll); // Chama a função ao clicar na página
+    document.addEventListener('click', attemptClickOrScroll); // Chama a função ao clicar na página
 };
