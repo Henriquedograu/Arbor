@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="usuario" placeholder="Usuário" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                </div>
+                <button class="btn" type="submit">Entrar</button>
+                <a href="esqueceu.html" class="forgot-password">Esqueceu sua senha?</a>
+            </form>
+            <a href="cadastro.html" class="forgot-password">Cadastrar-se</a> <!-- Estilo de Link -->
+        </div>
+    </div>
+
+    
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login realizado com sucesso!');
+            window.location.href = "serv.html"; // Redireciona para a página inicial
+        });
+    </script>
+
+</body>
+</html>
