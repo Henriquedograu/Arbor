@@ -99,8 +99,9 @@ nav ul li a:hover {
 /* Caixa de imagem quadrada */
 .image-box {
     flex: 2;
-    width: 400px; /* Largura aumentada */
-    height: 500px; /* Aumentada a altura */
+    width: 100%; /* Garantir que a imagem ocupe toda a largura disponível */
+    max-width: 400px; /* Largura máxima para telas maiores */
+    height: 100%;
     overflow: hidden; /* Garante que nada ultrapasse os limites da caixa */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
@@ -111,7 +112,7 @@ nav ul li a:hover {
 
 .image-box img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover; /* Faz a imagem cobrir a área da caixa sem distorcer */
     border-radius: 10px;
 }
@@ -119,8 +120,9 @@ nav ul li a:hover {
 /* Caixa de texto quadrada */
 .text-box {
     flex: 1;
-    width: 400px; /* Largura aumentada */
-    height: 500px; /* Aumentada a altura */
+    width: 100%; /* Garantir que a caixa ocupe toda a largura disponível */
+    max-width: 400px; /* Largura máxima para telas maiores */
+    height: auto;
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
@@ -156,5 +158,9 @@ nav ul li a:hover {
         width: 100%;
         height: auto;
         margin-bottom: 20px;
+    }
+
+    .text-box p {
+        font-size: 16px; /* Ajustando o tamanho do texto para dispositivos móveis */
     }
 }
