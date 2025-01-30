@@ -57,7 +57,16 @@ function redirectToLogin() {
 // Função para bloquear a rolagem da página até que o login seja feito
 let scrollBlocked = true;
 
+// Evento de scroll para mostrar a sobreposição
 window.addEventListener('scroll', () => {
+    if (scrollBlocked) {
+        overlayLogin.classList.add('active');
+        window.scrollTo(0, 0); // Impede o scroll
+    }
+});
+
+// Evento de click para mostrar a sobreposição
+window.addEventListener('click', () => {
     if (scrollBlocked) {
         overlayLogin.classList.add('active');
         window.scrollTo(0, 0); // Impede o scroll
@@ -126,7 +135,7 @@ function login() {
 }
 
 // Função chamada quando o usuário tenta rolar a página
-function attemptScroll() {
+function attemptClickOrScroll() {
     if (!scrollBlocked) {
         return;
     }
@@ -134,7 +143,8 @@ function attemptScroll() {
     overlayLogin.classList.add('active'); // Exibe a sobreposição
 }
 
-// Inicia o bloqueio da rolagem assim que a página começa a rolar
+// Inicia o bloqueio da rolagem assim que o usuário clicar ou rolar na página
 window.onload = function () {
-    window.addEventListener('scroll', attemptScroll); // Chama a função ao rolar a página
+    window.addEventListener('scroll', attemptClickOrScroll); // Chama a função ao rolar a página
+    window.addEventListener('click', attemptClickOrScroll); // Chama a função ao clicar na página
 };
