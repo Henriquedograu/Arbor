@@ -100,8 +100,8 @@ nav ul li a:hover {
 .image-box {
     flex: 2;
     width: 100%;
-    max-width: 500px; /* Largura máxima para as imagens */
-    height: auto;
+    max-width: 600px; /* Largura máxima aumentada */
+    height: 450px; /* Aumenta a altura */
     overflow: hidden; /* Garante que nada ultrapasse os limites da caixa */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
@@ -156,7 +156,7 @@ nav ul li a:hover {
 
     .image-box {
         width: 100%;
-        height: 350px; /* Aumentando a altura da imagem no mobile */
+        height: 400px; /* Aumentando a altura da imagem no mobile */
         margin-bottom: 20px;
     }
 
