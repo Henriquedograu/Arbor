@@ -99,9 +99,9 @@ nav ul li a:hover {
 /* Caixa de imagem quadrada */
 .image-box {
     flex: 2;
-    width: 100%; /* Garantir que a imagem ocupe toda a largura disponível */
-    max-width: 400px; /* Largura máxima para telas maiores */
-    height: 100%;
+    width: 100%;
+    max-width: 500px; /* Largura máxima para as imagens */
+    height: auto;
     overflow: hidden; /* Garante que nada ultrapasse os limites da caixa */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
@@ -112,7 +112,7 @@ nav ul li a:hover {
 
 .image-box img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover; /* Faz a imagem cobrir a área da caixa sem distorcer */
     border-radius: 10px;
 }
@@ -120,8 +120,8 @@ nav ul li a:hover {
 /* Caixa de texto quadrada */
 .text-box {
     flex: 1;
-    width: 100%; /* Garantir que a caixa ocupe toda a largura disponível */
-    max-width: 400px; /* Largura máxima para telas maiores */
+    width: 100%;
+    max-width: 500px; /* Largura máxima para as caixas de texto */
     height: auto;
     background-color: #fff;
     padding: 40px;
@@ -156,7 +156,7 @@ nav ul li a:hover {
 
     .image-box {
         width: 100%;
-        height: 300px; /* Altura ajustada para as imagens no mobile */
+        height: 350px; /* Aumentando a altura da imagem no mobile */
         margin-bottom: 20px;
     }
 
@@ -175,4 +175,10 @@ nav ul li a:hover {
     .text-box p {
         font-size: 16px; /* Ajustando o tamanho do texto para dispositivos móveis */
     }
+}
+
+/* Corrigir proporções da imagem 2 */
+.section2 .image-box img {
+    object-fit: cover; /* A imagem vai cobrir a área sem distorcer, mantendo a proporção */
+    height: 100%; /* Certifica que a imagem ocupe toda a altura da caixa */
 }
