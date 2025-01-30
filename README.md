@@ -8,7 +8,7 @@ A **Arbor** tem como missão facilitar a transição para um futuro mais limpo, 
 
 ## 🎨 Tecnologias Utilizadas
 - **HTML5** - Estrutura do site
-- **CSS3 (com animações e responsividade)** - Estilização moderna e dinâmica
+- **CSS3 (com animações e responsividade)** - Estilização moderna e dinâmica 
 - **JavaScript** - Funcionalidades interativas e animações
 - **Frameworks e Bibliotecas (se aplicável)** - Como GSAP para animações ou Leaflet.js para mapas
 
