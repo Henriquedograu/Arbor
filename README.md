@@ -1,4 +1,4 @@
-# Projeto de Site - [Nome do Seu Projeto]
+e# Projeto de Site - [Nome do Seu Projeto]
 
 Este repositório contém o código e os arquivos necessários para o site [Nome do Seu Projeto]. Este site é desenvolvido com HTML, CSS e JavaScript, com o objetivo de [descrever o objetivo do site, como apresentar informações sobre um produto, empresa, etc.].
 
