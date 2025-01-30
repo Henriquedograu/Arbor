@@ -151,4 +151,7 @@ function attemptClickOrScroll(event) {
 window.onload = function () {
     window.addEventListener('scroll', attemptClickOrScroll); // Chama a função ao rolar a página
     document.addEventListener('click', attemptClickOrScroll); // Chama a função ao clicar na página
+
+    // Adiciona o evento de toque na tela (novidade para dispositivos móveis)
+    document.addEventListener('touchstart', attemptClickOrScroll); // Chama a função ao tocar na tela (para mobile)
 };
