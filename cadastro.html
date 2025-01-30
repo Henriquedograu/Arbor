@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="login-container">
+            <h2>Cadastro</h2>
+            <form id="cadastroForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="usuario" placeholder="Usuário" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmarSenha" placeholder="Confirmar Senha" required>
+                </div>
+                <button class="btn" type="submit">Cadastrar</button>
+                <a href="login.html" class="forgot-password">Já tem uma conta? Faça login</a>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section contact">
+                <h3>Contato</h3>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>Email: contato@exemplo.com</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="#" class="social-icon facebook">Facebook</a></li>
+                    <li><a href="#" class="social-icon instagram">Instagram</a></li>
+                    <li><a href="#" class="social-icon twitter">Twitter</a></li>
+                    <li><a href="#" class="social-icon linkedin">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Todos os direitos reservados</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = "login.html"; // Redireciona para a página de login
+        });
+    </script>
+
+</body>
+</html>
