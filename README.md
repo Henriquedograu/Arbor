@@ -22,7 +22,7 @@ A **Arbor** tem como missão facilitar a transição para um futuro mais limpo, 
 ## 🛠 Como Executar o Projeto
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/henriqedograu/arbor-site.git
+   git clone https://github.com/Henriqedograu/arbor-site.git
    ```
 2. Acesse a pasta do projeto:
    ```bash
