@@ -1,0 +1,160 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Impede o scroll horizontal */
+}
+
+/* Header fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ícone de casa */
+.home-button {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Menu */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    font-weight: bold;
+    position: relative;
+    padding: 10px 0;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Estilo do botão */
+nav ul li a {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Efeito de hover */
+nav ul li a:hover {
+    color: rgb(0, 192, 147);
+}
+
+/* Seções */
+.section {
+    display: flex;
+    justify-content: space-between;
+    padding: 160px 60px 40px 60px; /* Padding superior e lateral */
+    min-height: 100vh; /* Faz com que cada seção ocupe a altura da tela */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+}
+
+/* Seções específicas */
+.section1, .section2, .section3 {
+    height: 100vh; /* Garante que todas as seções tenham a mesma altura */
+}
+
+.section1 {
+    background-color: #033a23;
+}
+
+.section2 {
+    background-color: #022718;
+}
+
+.section3 {
+    background-color: rgb(1, 19, 12);
+}
+
+/* Caixa de imagem quadrada */
+.image-box {
+    flex: 2;
+    width: 400px; /* Largura aumentada */
+    height: 500px; /* Aumentada a altura */
+    overflow: hidden; /* Garante que nada ultrapasse os limites da caixa */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir a área da caixa sem distorcer */
+    border-radius: 10px;
+}
+
+/* Caixa de texto quadrada */
+.text-box {
+    flex: 1;
+    width: 400px; /* Largura aumentada */
+    height: 500px; /* Aumentada a altura */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-box h2 {
+    font-size: 28px; /* Título maior */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-box p {
+    font-size: 18px; /* Texto maior */
+    color: #666;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 120px 20px 20px 20px; /* Ajuste do padding lateral para telas menores */
+    }
+
+    .image-box, .text-box {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
