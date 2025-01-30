@@ -1,0 +1,442 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout Global */
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #333; /* Cor mais visível */
+    overflow-x: hidden;
+}
+
+/* Cabeçalho - Design sofisticado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Logo */
+.logo img {
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Menu - Centralizado e responsivo */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do botão */
+nav ul li button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Linha de animação */
+nav ul li button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 192, 147);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover - botão */
+nav ul li button:hover {
+    color: rgb(0, 192, 147);
+    transform: translateY(-5px);
+}
+
+/* Exibir linha durante o hover */
+nav ul li button:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Menu suspenso (dropdown) */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 10;
+    width: 200px;
+}
+
+nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav ul li.dropdown .dropdown-menu li {
+    padding: 10px;
+    text-align: left;
+}
+
+nav ul li.dropdown .dropdown-menu li button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de hover para os itens do menu suspenso */
+nav ul li.dropdown .dropdown-menu li button:hover {
+    color: rgb(0, 192, 147);
+    transform: translateY(-3px);
+}
+
+/* Seção de Imagem preenchendo até o topo */
+.image-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-between {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Caixa Flutuante com novas informações */
+.floating-box {
+    position: absolute;
+    top: 100vh;
+    left: -10;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: showBox 1s forwards;
+    z-index: 1;
+}
+
+@keyframes showBox {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floating-box h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.floating-box p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .floating-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .image-section {
+        height: 100vh;
+    }
+
+    /* Ajustes no footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 80px 20px; /* Aumentando o espaçamento interno para deixar o rodapé mais alto */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Container do Rodapé */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    flex-wrap: wrap; /* Flexibilidade para telas menores */
+}
+
+/* Seções do Rodapé */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px; /* Mais espaço entre as seções */
+}
+
+.footer-section h3 {
+    font-size: 20px; /* Ajuste no tamanho do título */
+    margin-bottom: 20px; /* Aumentando o espaço abaixo do título */
+    color: #00b894;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px; /* Ajustando o espaçamento entre os itens */
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #00b894;
+}
+
+/* Estilo dos Ícones de Redes Sociais */
+.social-icons {
+    display: flex;
+    justify-content: space-evenly; /* Distribui os ícones com o mesmo espaçamento entre eles */
+    gap: 20px; /* Espaçamento fixo entre os ícones */
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 32px; /* Tamanho maior dos ícones */
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Ajusta a distância entre o Instagram e o LinkedIn */
+.social-icons a.instagram {
+    margin-right: 10px; /* Diminui a distância entre o Instagram e o LinkedIn */
+}
+
+.social-icons a.linkedin {
+    margin-left: 10px; /* Diminui a distância entre o Instagram e o LinkedIn */
+}
+
+.social-icons a:hover {
+    color: #00b894;
+    transform: scale(1.3);
+}
+
+/* Base do Rodapé */
+.footer-base {
+    border-top: 1px solid #333;
+    text-align: center;
+    padding-top: 30px; /* Aumentando o espaçamento superior */
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 40px; /* Ajustando o espaçamento nas versões móveis */
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-base {
+        margin-top: 60px; /* Aumentando o espaço na base */
+    }
+}
+
+/* Responsividade para o cabeçalho */
+@media (max-width: 768px) {
+    /* Logo */
+    .logo img {
+        width: 80px; /* Logo menor em dispositivos móveis */
+    }
+
+    /* Menu */
+    nav ul {
+        display: none; /* Esconde o menu em telas pequenas */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px 0;
+        z-index: 9;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Mostrar o menu ao clicar */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px; /* Alinha o ícone de menu à direita */
+    }
+
+    /* Ícone de menu */
+    .menu-toggle i {
+        color: white;
+        font-size: 30px;
+    }
+
+    /* Exibir o menu quando a classe 'active' for adicionada */
+    .nav-active {
+        display: flex;
+    }
+
+    /* Ajustes no botão de navegação */
+    nav ul li button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* Ajuste na animação do menu */
+    nav ul li button::after {
+        bottom: -8px;
+    }
+}
+
+/* Seção de Imagem com fundo responsivo */
+.image-section {
+    width: 100%;
+    height: 100vh; /* Altura da tela inteira */
+    position: relative;
+    background-image: url('imagem/dnv.jpg'); /* Adicione o caminho da imagem aqui */
+    background-size: cover; /* Faz a imagem cobrir toda a área da seção */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    overflow: hidden;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .image-section {
+        height: 60vh; /* Menor altura da imagem em telas pequenas */
+    }
+}
+
