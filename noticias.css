@@ -11,20 +11,20 @@ body {
     color: #eaeaea;
     line-height: 0.1;
     font-size: 16px;
-    margin: 0; /* Remove margens extras */
+    margin: 0;
     padding: 0;
 }
 
 footer {
-    margin-top: auto; /* Empurra o footer para o final */
+    margin-top: auto;
 }
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(135deg, #373737, #111); /* Gradiente sutil de cinza */
+    background: linear-gradient(135deg, #373737, #111);
     color: #eaeaea;
     text-align: center;
-    padding: 80px 0; /* Reduzindo o padding superior */
+    padding: 80px 0;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
 }
 
@@ -33,18 +33,18 @@ header h1 {
     font-weight: 800;
     letter-spacing: 6px;
     text-transform: uppercase;
-    color: #0ac451; /* Cor suave de laranja para um toque moderno */
+    color: #0ac451;
 }
 
 /* Carrossel */
 .carousel {
     position: relative;
     max-width: 1200px;
-    margin: 20px auto; /* Reduzindo a margem superior */
+    margin: 20px auto;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    height: 700px; /* Carrossel maior para mais impacto */
+    height: 700px;
 }
 
 .carousel-track {
@@ -63,7 +63,7 @@ header h1 {
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    filter: brightness(60%); /* Ajusta a imagem para o fundo mais escuro */
+    filter: brightness(60%);
 }
 
 .carousel-item .info {
@@ -79,7 +79,7 @@ header h1 {
 
 .carousel-item .info h2 {
     font-size: 2.8rem;
-    color: #033b1b; /* Cor para o título em destaque */
+    color: #033b1b;
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -158,22 +158,22 @@ button:hover {
 }
 
 .post a {
-    display: inline-block; /* Mantém o botão em bloco */
-    color: #067027; /* Laranja suave para os links */
+    display: inline-block;
+    color: #067027;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    margin-top: 20px; /* Adiciona espaçamento entre a imagem e o link */
-    padding: 10px 20px; /* Adiciona preenchimento ao redor do link */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro */
-    border-radius: 8px; /* Arredondamento do botão */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .post a:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Cor de fundo mais escura no hover */
-    color: #0ac451; /* Amarelo brilhante no hover */
-    transform: translateY(-3px); /* Leve movimento para cima no hover */
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #0ac451;
+    transform: translateY(-3px);
 }
 
 footer {
@@ -183,7 +183,7 @@ footer {
     padding: 40px 0;
     font-size: 1.2rem;
     border-top: 1px solid #444;
-    position: relative; /* Mantém o footer no fluxo do layout */
+    position: relative;
 }
 
 footer p {
@@ -217,22 +217,28 @@ footer p {
 header .header-button {
     position: absolute;
     top: 20px;
-    left: 20px; /* Posicionando o botão no lado esquerdo */
-    background-color: transparent; /* Removendo o fundo */
-    color: #0ac451; /* Cor do texto do botão */
-    border: none; /* Removendo a borda */
-    padding: 0; /* Removendo o espaçamento */
-    font-size: 2rem; /* Mantendo o tamanho do ícone */
+    left: 20px;
+    background-color: transparent;
+    color: #0ac451;
+    border: none;
+    padding: 0;
+    font-size: 2rem;
     cursor: pointer;
     transition: color 0.3s;
-    width: auto; /* Garantir que a largura se ajuste ao conteúdo */
-    height: auto; /* Ajustando a altura ao conteúdo */
-    border-radius: 0; /* Removendo o arredondamento */
-    display: inline-flex; /* Ajustando o ícone de forma flexível */
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    display: inline-flex;
 }
 
-/* Efeito de hover */
 header .header-button:hover {
-    color: #08f0e4; /* Cor do texto no hover */
+    color: #08f0e4;
 }
 
+/* Garantindo imagens com o mesmo tamanho nas postagens */
+.post img {
+    width: 100%;
+    height: 200px; /* Tamanho fixo para todas as imagens */
+    object-fit: cover; /* Garantindo que a imagem não distorça */
+    border-radius: 10px;
+}
