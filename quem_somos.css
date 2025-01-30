@@ -154,7 +154,19 @@ nav ul li a:hover {
         padding: 120px 20px 20px 20px; /* Ajuste do padding lateral para telas menores */
     }
 
-    .image-box, .text-box {
+    .image-box {
+        width: 100%;
+        height: 300px; /* Altura ajustada para as imagens no mobile */
+        margin-bottom: 20px;
+    }
+
+    .image-box img {
+        object-fit: cover; /* A imagem ainda cobrirá a área da caixa sem distorcer */
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-box {
         width: 100%;
         height: auto;
         margin-bottom: 20px;
