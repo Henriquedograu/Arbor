@@ -1,0 +1,143 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: linear-gradient(90deg, #021301, #043006);
+    color: #fff;
+    padding: 1rem 2rem; /* Padding reduzido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 80px; /* Definir a altura do cabeçalho */
+}
+
+header .logo a {
+    display: inline-block;
+    height: 100%; /* Garantir que o link ocupe toda a altura do cabeçalho */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+header .logo img {
+    height: 60%;  /* Ajuste a altura da imagem para 60% da altura do cabeçalho */
+    width: auto;  /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease;  /* Efeito de transição ao passar o mouse */
+}
+
+header .logo img:hover {
+    transform: scale(1.05);  /* Efeito de zoom quando o mouse passa sobre a imagem */
+    cursor: pointer;  /* Indica que é clicável */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #cce7d0;
+}
+
+/* Introdução */
+.intro {
+    color: #133a12;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Conteúdo */
+main {
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: -50px auto 2rem;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+main .content {
+    margin-bottom: 3rem;
+}
+
+/* Estilos de Títulos de Seções */
+.content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2d572c; /* Cor mais escura para contraste */
+}
+
+.content h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #4caf50; /* Cor de destaque para subtítulos */
+}
+
+.content ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.content ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+    background: #062c05;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+section {
+    scroll-margin-top: 100px; /* Ajuste o valor conforme necessário */
+}
+
+.header-button {
+    background: none;
+    border: none;  /* Remove a borda */
+    color: white;  /* Cor branca para o ícone */
+    font-size: 2rem;  /* Aumentando o tamanho do ícone */
+    cursor: pointer;  /* Muda o cursor para indicar que é clicável */
+    padding: 0;
+}
+
+/* Adiciona um efeito de zoom no ícone quando o mouse passa sobre ele */
+.header-button:hover {
+    transform: scale(1.1);  /* Aumenta ligeiramente o ícone ao passar o mouse */
+}
