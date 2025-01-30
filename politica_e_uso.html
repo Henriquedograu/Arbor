@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade e Termos de Uso - Arbor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="politica_e_uso.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <!-- Transformando o logo em uma imagem com link para a home -->
+            <a href="pagina_inicial.html"> <!-- Link para a outra página -->
+                <button class="header-button">&#8962;</button> <!-- Botão adicionado -->
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#privacy">Política de Privacidade</a></li>
+                <li><a href="#terms">Termos de Uso</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Conteúdo Principal -->
+    <main>
+ 
+
+        <!-- Seção de Política de Privacidade -->
+        <section id="privacy" class="content">
+            <h3>Política de Privacidade</h3>
+            <p>
+                Garantir a privacidade e a proteção dos dados pessoais de nossos usuários é uma prioridade para a Arbor. Esta seção detalha como coletamos, utilizamos e protegemos as informações que você nos fornece.
+            </p>
+
+            <h4>1. Coleta de Informações</h4>
+            <p>
+                Coletamos informações de diferentes formas, incluindo:
+            </p>
+            <ul>
+                <li>Informações fornecidas diretamente por você, como nome, e-mail, endereço, CPF, telefone e dados de pagamento durante o cadastro ou compra;</li>
+                <li>Dados coletados automaticamente, como endereço IP, navegador utilizado, páginas acessadas e tempo de navegação em nosso site;</li>
+                <li>Informações adicionais, obtidas por meio de interações como formulários de contato, feedbacks ou pesquisas de satisfação.</li>
+            </ul>
+
+            <h4>2. Uso das Informações</h4>
+            <p>
+                As informações coletadas têm como objetivo:
+            </p>
+            <ul>
+                <li>Garantir a personalização da sua experiência em nosso site e oferecer recomendações baseadas no seu comportamento de navegação;</li>
+                <li>Facilitar transações, como compras e pagamentos, com segurança e eficiência;</li>
+                <li>Entrar em contato com você para notificações importantes, promoções e novidades;</li>
+                <li>Entender melhor suas necessidades e aprimorar nossos produtos e serviços.</li>
+            </ul>
+
+            <h4>3. Compartilhamento de Dados</h4>
+            <p>
+                Seus dados pessoais nunca serão vendidos ou alugados. No entanto, podemos compartilhá-los com terceiros de confiança, estritamente para:
+            </p>
+            <ul>
+                <li>Processamento de pagamentos, através de gateways de pagamento seguros;</li>
+                <li>Envio de produtos por meio de empresas de logística;</li>
+                <li>Cumprimento de obrigações legais ou ordens judiciais.</li>
+            </ul>
+
+            <h4>4. Proteção de Dados</h4>
+            <p>
+                Adotamos diversas medidas de segurança para proteger suas informações, incluindo:
+            </p>
+            <ul>
+                <li>Criptografia dos dados sensíveis durante o envio e armazenamento;</li>
+                <li>Monitoramento contínuo para identificar e mitigar ameaças;</li>
+                <li>Restrição de acesso às informações apenas para funcionários autorizados.</li>
+            </ul>
+            <p>
+                Apesar dos nossos esforços, nenhum sistema é totalmente seguro. Recomendamos que você mantenha suas credenciais protegidas e evite compartilhar informações confidenciais em redes públicas.
+            </p>
+        </section>
+
+        <!-- Seção de Termos de Uso -->
+        <section id="terms" class="content">
+            <h3>Termos de Uso</h3>
+            <p>
+                Estes Termos de Uso regem o acesso e a utilização do site da Arbor, bem como dos produtos e serviços por nós oferecidos. Ao acessar o site, você concorda em cumprir estas condições.
+            </p>
+
+            <h4>1. Acesso e Uso</h4>
+            <p>
+                O acesso ao site é permitido para fins pessoais e não comerciais. Você concorda em utilizar nosso site de forma ética e respeitosa, não realizando práticas que prejudiquem outros usuários ou a infraestrutura da plataforma.
+            </p>
+
+            <h4>2. Compras e Pagamentos</h4>
+            <p>
+                Todas as compras realizadas em nossa plataforma estão sujeitas à confirmação de pagamento. Garantimos transparência nas condições de venda, incluindo preços, prazos de entrega e políticas de devolução.
+            </p>
+
+            <h4>3. Direitos de Propriedade Intelectual</h4>
+            <p>
+                Todo o conteúdo disponibilizado no site, como textos, imagens, vídeos, logotipos e designs, é propriedade da Arbor e protegido por direitos autorais. O uso indevido está sujeito a sanções legais.
+            </p>
+
+            <h4>4. Limitação de Responsabilidade</h4>
+            <p>
+                A Arbor não será responsável por:
+            </p>
+            <ul>
+                <li>Interrupções temporárias no site causadas por manutenção ou problemas técnicos;</li>
+                <li>Erros decorrentes do uso inadequado de nossos produtos;</li>
+                <li>Conteúdos de terceiros vinculados em nossa plataforma.</li>
+            </ul>
+
+            <h4>5. Alterações nos Termos</h4>
+            <p>
+                A Arbor reserva-se o direito de modificar estes Termos de Uso a qualquer momento. Notificaremos nossos usuários sobre mudanças significativas através do próprio site ou por e-mail.
+            </p>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2025 ARBOR. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script JavaScript para ajuste dinâmico -->
+    <script>
+        // Ajusta a posição da introdução para evitar sobreposição com o cabeçalho
+        window.addEventListener('load', function() {
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const introSection = document.querySelector('.intro');
+            introSection.style.marginTop = `${headerHeight + 20}px`;  // Ajuste conforme necessário
+        });
+    </script>
+</body>
+</html>
