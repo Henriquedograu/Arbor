@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARBOR</title>
+    <link rel="stylesheet" href="pagina_inicial.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="imagem/logo arbor branca.png" alt="Logo">
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i> <!-- Ícone de menu -->
+            </div>
+            <ul>
+                <li><button class="nav-btn" data-href="quem_somos.html">Quem Somos</button></li>
+                <li class="dropdown">
+                    <button class="nav-btn" data-href="servico.html">Serviço</button>
+                    <ul class="dropdown-menu">
+                        <li><button class="nav-btn" data-href="servico.html#franquia">Franquia</button></li>
+                        <li><button class="nav-btn" data-href="servico.html#locacao">Locação Nickname</button></li>
+                        <li><button class="nav-btn" data-href="servico.html#espaco-publicitario">Espaço Publicitário</button></li>
+                        <li><button class="nav-btn" data-href="servico.html#carregadores">Carregadores</button></li>
+                        <li><button class="nav-btn" data-href="servico.html#gestao-unidades">Gestão de Unidades</button></li>
+                    </ul>
+                </li>
+                <li><button class="nav-btn" data-href="projetos.html">Projetos</button></li>
+                <li><button class="nav-btn" data-href="noticias.html">Notícias</button></li>
+                <li><button class="nav-btn" data-href="login.html">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Imagem que ocupa a tela inteira -->
+    <div class="image-section">
+        <img src="imagem/dnv.jpg" alt="Imagem Entre" class="image-between">
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Seção de Contato -->
+            <div class="footer-section contato">
+                <h3>Contato</h3>
+                <ul>
+                    <!-- Telefone (chamada direta) -->
+                    <li><i class="fas fa-phone-alt"></i> <strong>Telefone:</strong> <a href="tel:+551112345678" target="_blank">(11) 1234-5678</a></li>
+
+                    <!-- Email (abre para enviar e-mail) -->
+                    <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:arbor@gmail.com" target="_blank">arbor.aser@gmail.com</a></li>
+
+                    <!-- Endereço (abre no Google Maps) -->
+                    <li><i class="fas fa-building"></i> <strong>Endereço:</strong> <a href="https://www.google.com/maps?q=Rua+Ezequiel Freire,+192,+São+Paulo,+SP,+Brasil" target="_blank">Rua Ezequiel Freire, 192, Sala 708, São Paulo- SP, CEP 2034-000</a></li>
+
+                    <!-- WhatsApp (abre conversa direta no WhatsApp) -->
+                    <li><i class="fab fa-whatsapp"></i> <strong><a href="https://wa.me/5511996331757" target="_blank">WhatsApp</a></strong></li>
+                </ul>
+            </div>
+
+            <!-- Links Úteis -->
+            <div class="footer-section links">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="quem_somos.html">Quem Somos</a></li>
+                    <li><a href="servico.html">Serviços</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section extras">
+                <h3>Recursos Extras</h3>
+                <ul>
+                    <!-- Ajuste nos links para âncoras -->
+                    <li><a href="politica_e_uso.html#privacy">Política de Privacidade</a></li>
+                    <li><a href="politica_e_uso.html#terms">Termos de Uso</a></li>
+                </ul>
+            </div>
+    
+            <!-- Redes Sociais -->
+            <div class="footer-section social">
+                <h3>Siga-nos</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Base do Rodapé -->
+            <div class="footer-base">
+                <p>© 2025 ARBOR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        // Navegação dinâmica
+        const navButtons = document.querySelectorAll('.nav-btn');
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetPage = button.getAttribute('data-href');
+                window.location.href = targetPage;
+            });
+        });
+
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('nav-active');
+        });
+    </script>
+</body>
+</html>
