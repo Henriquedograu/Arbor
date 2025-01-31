@@ -73,15 +73,15 @@ nav ul li a:hover {
 /* Seções */
 .section {
     display: flex;
-    justify-content: space-between;
-    padding: 160px 60px 40px 60px; /* Padding superior e lateral */
-    min-height: 100vh; /* Faz com que cada seção ocupe a altura da tela */
-    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: center;
+    align-items: center;
+    padding: 160px 60px 40px 60px;
+    min-height: 100vh;
 }
 
 /* Seções específicas */
 .section1, .section2, .section3 {
-    height: 100vh; /* Garante que todas as seções tenham a mesma altura */
+    height: 100vh;
 }
 
 .section1 {
@@ -100,11 +100,11 @@ nav ul li a:hover {
 .image-box {
     flex: 2;
     width: 100%;
-    max-width: 600px; /* Largura máxima aumentada */
-    height: 450px; /* Aumenta a altura */
-    overflow: hidden; /* Garante que nada ultrapasse os limites da caixa */
+    max-width: 700px; /* Aumentando o tamanho da imagem no PC */
+    height: 100%;
+    overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,8 +112,8 @@ nav ul li a:hover {
 
 .image-box img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz a imagem cobrir a área da caixa sem distorcer */
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -121,25 +121,25 @@ nav ul li a:hover {
 .text-box {
     flex: 1;
     width: 100%;
-    max-width: 500px; /* Largura máxima para as caixas de texto */
+    max-width: 500px; /* Ajustando para manter equilíbrio */
     height: auto;
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .text-box h2 {
-    font-size: 28px; /* Título maior */
+    font-size: 28px;
     color: #333;
     margin-bottom: 10px;
 }
 
 .text-box p {
-    font-size: 18px; /* Texto maior */
+    font-size: 18px;
     color: #666;
     line-height: 1.6;
     overflow-y: auto;
@@ -151,17 +151,18 @@ nav ul li a:hover {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 120px 20px 20px 20px; /* Ajuste do padding lateral para telas menores */
+        padding: 120px 20px 20px 20px;
     }
 
     .image-box {
         width: 100%;
-        height: 400px; /* Aumentando a altura da imagem no mobile */
+        height: 300px;
+        max-width: 400px; /* Mantendo a proporção da imagem no celular */
         margin-bottom: 20px;
     }
 
     .image-box img {
-        object-fit: cover; /* A imagem ainda cobrirá a área da caixa sem distorcer */
+        object-fit: cover;
         width: 100%;
         height: 100%;
     }
@@ -169,16 +170,11 @@ nav ul li a:hover {
     .text-box {
         width: 100%;
         height: auto;
+        max-width: 400px; /* Mantendo a proporção da caixa de texto no celular */
         margin-bottom: 20px;
     }
 
     .text-box p {
-        font-size: 16px; /* Ajustando o tamanho do texto para dispositivos móveis */
+        font-size: 16px;
     }
-}
-
-/* Corrigir proporções da imagem 2 */
-.section2 .image-box img {
-    object-fit: cover; /* A imagem vai cobrir a área sem distorcer, mantendo a proporção */
-    height: 100%; /* Certifica que a imagem ocupe toda a altura da caixa */
 }
